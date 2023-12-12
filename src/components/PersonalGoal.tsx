@@ -1,14 +1,16 @@
+import { type ReactNode } from 'react';
+
 interface PersonalGoalProps {
   title: string;
-  description: string;
+  children: ReactNode;
 }
 
-const PersonalGoal = ({ title, description }: PersonalGoalProps) => {
+const PersonalGoal = ({ title, children }: PersonalGoalProps) => {
   return (
     <article>
       <div>
         <h2>{title}</h2>
-        <p>{description}</p>
+        {children}
       </div>
       <button>Delete</button>
     </article>
