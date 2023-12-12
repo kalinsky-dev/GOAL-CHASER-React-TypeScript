@@ -1,10 +1,9 @@
-const PersonalGoal = ({
-  title,
-  description,
-}: {
+interface PersonalGoalProps {
   title: string;
   description: string;
-}) => {
+}
+
+const PersonalGoal = ({ title, description }: PersonalGoalProps) => {
   return (
     <article>
       <div>
