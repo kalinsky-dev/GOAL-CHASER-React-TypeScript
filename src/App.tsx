@@ -3,7 +3,10 @@ import PersonalGoal from './components/PersonalGoal.tsx';
 const App = () => {
   return (
     <main>
-      <PersonalGoal />
+      <PersonalGoal
+        title='Learn React + TS'
+        description='Learn it from the ground up'
+      />
     </main>
   );
 };
