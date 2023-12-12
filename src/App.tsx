@@ -4,20 +4,20 @@ import Header from './components/Header.tsx';
 import PersonalGoalList from './components/PersonalGoalList.tsx';
 import goalsImg from './assets/goals.jpg';
 
-interface PersonalGoal {
+export interface IPersonalGoal {
   title: string;
   description: string;
   id: number;
 }
 
 const App = () => {
-  const [goals, setGoals] = useState<PersonalGoal[]>([]);
+  const [goals, setGoals] = useState<IPersonalGoal[]>([]);
 
   function addGoalHandler() {
     console.log('button is clicked');
 
     setGoals((prevGoals) => {
-      const newGoal: PersonalGoal = {
+      const newGoal: IPersonalGoal = {
         title: 'Learn React + TS',
         description: 'Learn it in depth!',
         id: Math.random(),

@@ -1,16 +1,11 @@
 import PersonalGoal from './PersonalGoal.tsx';
+import { IPersonalGoal } from '../App.tsx';
 
-interface PersonalGoal {
-  title: string;
-  description: string;
-  id: number;
+interface IPersonalGoalListProps {
+  goals: IPersonalGoal[];
 }
 
-interface PersonalGoalListProps {
-  goals: PersonalGoal[];
-}
-
-const PersonalGoalList = ({ goals }: PersonalGoalListProps) => {
+const PersonalGoalList = ({ goals }: IPersonalGoalListProps) => {
   return (
     <ul>
       {goals.map((goal) => (
