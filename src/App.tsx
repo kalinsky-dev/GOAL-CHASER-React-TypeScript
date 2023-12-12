@@ -1,5 +1,11 @@
+import PersonalGoal from './components/PersonalGoal.tsx';
+
 const App = () => {
-  return <h1>It's just the beginning!</h1>;
+  return (
+    <main>
+      <PersonalGoal />
+    </main>
+  );
 };
 
 export default App;
