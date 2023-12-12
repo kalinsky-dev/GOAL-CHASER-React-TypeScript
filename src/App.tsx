@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import Header from './components/Header.tsx';
+import PersonalGoalList from './components/PersonalGoalList.tsx';
 import goalsImg from './assets/goals.jpg';
-import PersonalGoal from './components/PersonalGoal.tsx';
 
 interface PersonalGoal {
   title: string;
@@ -32,14 +32,8 @@ const App = () => {
       <Header image={{ src: goalsImg, alt: 'A list of goals' }}>
         <h1>Your Personal Goals</h1>
       </Header>
+      <PersonalGoalList goals={goals} />
       <button onClick={addGoalHandler}>Add Goal</button>
-      <ul>
-        {goals.map((goal) => (
-          <li key={goal.id}>
-            <PersonalGoal title={goal.title} description={goal.description} />
-          </li>
-        ))}
-      </ul>
     </main>
   );
 };
