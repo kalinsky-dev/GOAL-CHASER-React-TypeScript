@@ -14,13 +14,13 @@ export interface IPersonalGoal {
 const App = () => {
   const [goals, setGoals] = useState<IPersonalGoal[]>([]);
 
-  function addGoalHandler() {
+  function addGoalHandler(goal: string, summary: string) {
     console.log('button is clicked');
 
     setGoals((prevGoals) => {
       const newGoal: IPersonalGoal = {
-        title: 'Learn React + TS',
-        description: 'Learn it in depth!',
+        title: goal,
+        description: summary,
         id: Math.random(),
       };
 
@@ -37,7 +37,7 @@ const App = () => {
       <Header image={{ src: goalsImg, alt: 'A list of goals' }}>
         <h1>Your Personal Goals</h1>
       </Header>
-      <NewGoal />
+      <NewGoal onAddGoal={addGoalHandler} />
       <PersonalGoalList goals={goals} onDeleteGoal={deleteGoalHandler} />
     </main>
   );
