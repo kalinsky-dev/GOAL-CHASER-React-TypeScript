@@ -15,7 +15,7 @@ const App = () => {
   const [goals, setGoals] = useState<IPersonalGoal[]>([]);
 
   function addGoalHandler(goal: string, summary: string) {
-    console.log('button is clicked');
+    // console.log('button is clicked');
 
     setGoals((prevGoals) => {
       const newGoal: IPersonalGoal = {
