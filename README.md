@@ -1,3 +1,20 @@
+# Goal Chaser
+
+This is a simple application, where you can add and remove your personal Goals.
+
+## Bootstrap the Application
+
+In the project directory, you can run:
+
+```
+npm install && npm run dev
+```
+Runs the app in the development mode.\
+Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
